@@ -1,0 +1,53 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://particles_shader.tres" type="Shader" id=1]
+
+[sub_resource type="ShaderMaterial" id=4]
+shader = ExtResource( 1 )
+shader_param/direction = Vector3( 0, 1, 0 )
+shader_param/spread = 45.0
+shader_param/flatness = 0.0
+shader_param/initial_linear_velocity = 500.0
+shader_param/initial_angle = 0.0
+shader_param/angular_velocity = 0.0
+shader_param/orbit_velocity = 0.0
+shader_param/linear_accel = 0.0
+shader_param/radial_accel = 0.0
+shader_param/tangent_accel = 0.0
+shader_param/damping = 0.0
+shader_param/scale = 1.0
+shader_param/hue_variation = 0.0
+shader_param/anim_speed = null
+shader_param/anim_offset = null
+shader_param/initial_linear_velocity_random = 1.0
+shader_param/initial_angle_random = 0.0
+shader_param/angular_velocity_random = 0.0
+shader_param/orbit_velocity_random = 0.0
+shader_param/linear_accel_random = 0.0
+shader_param/radial_accel_random = 0.0
+shader_param/tangent_accel_random = 0.0
+shader_param/damping_random = 0.0
+shader_param/scale_random = 0.0
+shader_param/hue_variation_random = 0.0
+shader_param/anim_speed_random = 0.0
+shader_param/anim_offset_random = 0.0
+shader_param/lifetime_randomness = 0.0
+shader_param/emission_box_extents = Vector3( 1, 1, 0 )
+shader_param/color_value = null
+shader_param/trail_divisor = null
+shader_param/gravity = Vector3( 0, 500, 0 )
+shader_param/sprite_pos = Vector2( 0, 0 )
+shader_param/collision_mipmap = 2.0
+shader_param/sample_range = 1.0
+shader_param/sample_step = 1.0
+shader_param/velocity_decay_x = 0.5
+shader_param/velocity_decay_y = 0.25
+shader_param/bounce_decay_alpha = 2.0
+
+[node name="Particles" type="Particles2D"]
+emitting = false
+amount = 256
+one_shot = true
+explosiveness = 1.0
+local_coords = false
+process_material = SubResource( 4 )
